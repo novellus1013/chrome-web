@@ -1,0 +1,79 @@
+@import "reset.css";
+
+:root {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  padding: 5rem;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/gameboy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  color: white;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-form > input {
+  /* width: 20rem;
+  height: 3rem;
+  font-size: 2rem;
+  outline: none;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+  color: white; */
+  width: 100%;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2.25em;
+  font-weight: 500;
+  line-height: 1.2;
+  outline: none;
+  text-align: center;
+}
+
+#login-form > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 4rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.fa-gamepad {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

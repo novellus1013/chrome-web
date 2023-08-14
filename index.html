@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="overlay hidden">
+      <h1 class="title">Press Start 1p</h1>
+      <form class="hidden" id="login-form">
+        <input required maxlength="10" type="text" />
+        <button type="submit">
+          <i class="fa-solid fa-gamepad fa-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <header class="header">
+      <h2 id="clock"></h2>
+      <span id="quoto"></span>
+      <h2 class="hidden" id="greeting"></h2>
+    </header>
+    <section class="contents">
+      <div class="todo"></div>
+      <div class="gpt"></div>
+    </section>
+    <script src="./js/clock.js"></script>
+    <script src="./js/gpt.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+  </body>
+</html>
