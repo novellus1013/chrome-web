@@ -1,10 +1,15 @@
 @import "reset.css";
+@import "header.css";
+@import "contents.css";
 
 :root {
   font-family: "Press Start 2P", cursive;
   font-size: 16px;
   width: 100vw;
   height: 100vh;
+}
+body {
+  box-sizing: border-box;
 }
 
 .overlay {
