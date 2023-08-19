@@ -2,7 +2,7 @@ const title = document.querySelector(".gpt-title");
 const input = document.querySelector(".gpt-inputs");
 const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
-const api = "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";
+const api = process.env.GPT_API_KEY;
 const url = "https://api.openai.com/v1/chat/completions";
 
 const roles = [
