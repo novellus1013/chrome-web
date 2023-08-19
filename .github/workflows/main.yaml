@@ -16,7 +16,7 @@ jobs:
       - name: Replace open API key in JS
         env:
           CHAT_GPT_SECRET_KEY: ${{ secrets.CHAT_GPT_SECRET_KEY }}
-        run: sed -i "s/OPEN_API_KEY/$CHAT_GPT_SECRET_KEY/g" js/gpt.js
+        run: sed -i "s/OPEN_API_KEY/\"$CHAT_GPT_SECRET_KEY\"/g" js/gpt.js
 
       - name: Commit changes
         run: |
