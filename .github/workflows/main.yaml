@@ -1,0 +1,31 @@
+name: Replace Open API Key and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  replace-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Replace open API key in JS
+        env:
+          CHAT_GPT_SECRET_KEY: ${{ secrets.CHAT_GPT_SECRET_KEY }}
+        run: sed -i "s/OPEN_API_KEY/$CHAT_GPT_SECRET_KEY/g" path/to/your.js
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Replace open API key" -a
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./path/to/your/static/files
