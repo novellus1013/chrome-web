@@ -8,9 +8,6 @@
   width: 100vw;
   height: 100vh;
 }
-body {
-  box-sizing: border-box;
-}
 
 .overlay {
   padding: 5rem;
@@ -42,14 +39,6 @@ body {
 }
 
 #login-form > input {
-  /* width: 20rem;
-  height: 3rem;
-  font-size: 2rem;
-  outline: none;
-  border-radius: 20px;
-  background-color: transparent;
-  border: none;
-  color: white; */
   width: 100%;
   display: block;
   background: 0;

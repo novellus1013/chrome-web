@@ -1,0 +1,101 @@
+.contents {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.gpt {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(105, 105, 105, 0.1);
+  border-radius: 10px;
+}
+.gpt-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.user-inputs {
+  display: flex;
+  padding: 10px;
+}
+.user-inputs input {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+}
+.user-inputs button {
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.center {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(105, 105, 105, 0.1);
+  border-radius: 10px;
+  gap: 2rem;
+  background-image: url("/assets/back.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem;
+}
+
+.explain {
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.6;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.explain__title {
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons button {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: white;
+}
+
+.btn-code {
+  background-color: tomato;
+}
+
+.btn-lang {
+  background-color: #1e88e5;
+}
+
+.todo {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(105, 105, 105, 0.1);
+  border-radius: 10px;
+}
