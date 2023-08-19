@@ -3,7 +3,7 @@ name: Replace Open API Key and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 jobs:
   replace-and-deploy:
