@@ -6,11 +6,11 @@ const btnDisabled = document.querySelector(".gpt-inputs button");
 
 const GPT_DOCS = [
   {
-    title: "저는 Programming GPT입니다.",
+    title: "Programming GPT",
     text: "저는 당신만을 위한 코딩 선생님입니다. 코딩 학습에 관해 궁금한 점에 대해 입력 창에 자세히 적어주세요! ",
   },
   {
-    title: "저는 English GPT입니다.",
+    title: "English GPT",
     text: "저는 당신만을 위한 영어 선생님입니다. 영어 학습에 관해 궁금한 점에 대해 입력 창에 자세히 적어주세요!",
   },
 ];
@@ -27,10 +27,12 @@ function handleExpalin() {
     explain__title.innerText = GPT_DOCS[0].title;
     explain__text.innerText = GPT_DOCS[0].text;
     btnDisabled.disabled = false;
+    btnDisabled.style.opacity = 1;
   } else if (text === "English Trainer") {
     explain__title.innerText = GPT_DOCS[1].title;
     explain__text.innerText = GPT_DOCS[1].text;
     btnDisabled.disabled = false;
+    btnDisabled.style.opacity = 1;
   }
 }
 

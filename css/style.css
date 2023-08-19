@@ -9,6 +9,13 @@
   height: 100vh;
 }
 
+body {
+  background-image: url("/assets/back.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 2rem 2rem;
+}
+
 .overlay {
   padding: 5rem;
   width: 100vw;

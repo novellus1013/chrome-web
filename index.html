@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="overlay hidden">  
+    <div class="overlay hidden">
       <h1 class="title">Press Start 1p</h1>
       <form class="hidden" id="login-form">
         <input required maxlength="10" type="text" />
@@ -35,8 +35,8 @@
       <div class="gpt">
         <div class="gpt-title">matrix 탈출 전...</div>
         <div class="gpt-inputs">
-          <input type="text" placeholder="무엇이든 물어보세요" ></input>
-          <button disabled >전송</button>
+          <textarea type="text" placeholder="무엇이든 물어보세요"></textarea>
+          <button disabled>알려주세요</button>
         </div>
         <div class="gpt-answers">
           <p class="answer"></p>
@@ -44,17 +44,25 @@
       </div>
       <div class="center">
         <div class="explain">
-          <h3 class="explain__title">
-            안녕하세요. 저는 당신의 학습을 도와줄 AI 비서입니다.
-          </h3>
-          <p class="explain__text">원하는 서비스를 선택해 주세요!</p>
+          <h3 class="explain__title">Hello</h3>
+          <p class="explain__text">
+            저는 당신의 학습을 도와줄 AI 서비스 입니다. 원하는 카테고리를 선택해
+            주세요! 새로운 질문을 하시면 이전 답변은 지워져요!
+          </p>
         </div>
         <div class="buttons">
           <button class="btn-code">Programming</button>
           <button class="btn-lang">English</button>
         </div>
+        <button class="btn-out">
+          <img
+            class="img-out"
+            src="/assets/escape.png"
+            alt="파란 약은 맛있다"
+          />
+        </button>
       </div>
-      <div classㅁ="todo"></div>
+      <div class="todo"></div>
     </section>
     <script src="./js/clock.js"></script>
     <script src="./js/gpt.js"></script>
@@ -62,5 +70,6 @@
     <script src="./js/todo.js"></script>
     <script src="./js/weather.js"></script>
     <script src="./js/center.js"></script>
+    <script src="./js/background.js"></script>
   </body>
 </html>

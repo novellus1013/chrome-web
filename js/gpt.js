@@ -1,8 +1,8 @@
 const title = document.querySelector(".gpt-title");
 const input = document.querySelector(".gpt-inputs");
-const question = document.querySelector(".gpt-inputs input");
+const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
-const api = {};
+const api = "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";
 const url = "https://api.openai.com/v1/chat/completions";
 
 const roles = [
@@ -11,6 +11,8 @@ const roles = [
 ];
 
 async function handleQuestion() {
+  document.querySelector(".answer").textContent = "답변 생성 중...";
+
   const options = {
     method: "POST",
     // API 요청의 헤더를 설정
@@ -31,7 +33,7 @@ async function handleQuestion() {
         },
       ],
       temperature: 0.8, // 모델의 출력 다양성
-      max_tokens: 500, // 응답받을 메시지 최대 토큰(단어) 수 설정
+      max_tokens: 400, // 응답받을 메시지 최대 토큰(단어) 수 설정
       top_p: 1, // 토큰 샘플링 확률을 설정
       frequency_penalty: 1, // 일반적으로 나오지 않는 단어를 억제하는 정도
       presence_penalty: 1, // 동일한 단어나 구문이 반복되는 것을 억제하는 정도

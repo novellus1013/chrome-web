@@ -4,6 +4,7 @@ const greeting = document.querySelector("#greeting");
 const overlay = document.querySelector(".overlay");
 const header = document.querySelector(".header");
 const contents = document.querySelector(".contents");
+const explainTitle = document.querySelector(".explain__title");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
@@ -19,6 +20,7 @@ function onLoginSubmit(e) {
 function paintGreeting(username) {
   greeting.innerText = `Player ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  explainTitle.innerText = `Hello ${username}`;
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
