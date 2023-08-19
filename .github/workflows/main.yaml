@@ -3,7 +3,7 @@ name: Replace Open API Key and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - gh-pages
 
 jobs:
   replace-and-deploy:
@@ -14,10 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Replace open API key in JS
-      env:
-        OPEN_API_KEY: ${{ secrets.OPEN_API_KEY }}
-      run: sed -i.back "s/\"OPEN_API_KEY\"/\"$OPEN_API_KEY\"/g" js/gpt.js
-
+        env:
+          OPEN_API_KEY: ${{ secrets.OPEN_API_KEY }}
+        run: sed -i "s/\"OPEN_API_KEY\"/\"$OPEN_API_KEY\"/g" js/gpt.js
 
       - name: Commit changes
         run: |
