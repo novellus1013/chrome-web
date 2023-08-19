@@ -1,0 +1,17 @@
+.quote {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  line-height: 1.5;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.quote span:first-child {
+  width: 80%;
+}
+.quote span:last-child {
+  width: 20%;
+}

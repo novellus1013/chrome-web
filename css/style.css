@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "header.css";
 @import "contents.css";
+@import "footer.css";
 
 :root {
   font-family: "Press Start 2P", cursive;
