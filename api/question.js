@@ -1,11 +1,11 @@
-const express = require("express");
-const fetch = require("node-fetch");
+import express, { json } from "express";
+import fetch from "node-fetch";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 const API_KEY = process.env.API_KEY; // Vercel에서 설정한 환경 변수
 
-app.use(express.json());
+app.use(json());
 
 app.post("/api/question", async (req, res) => {
   const url = "https://api.openai.com/v1/chat/completions";
