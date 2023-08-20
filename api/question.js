@@ -1,7 +1,7 @@
-import express, { json } from "express";
+import express from "express";
 import fetch from "node-fetch";
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 const API_KEY = process.env.API_KEY; // Vercel에서 설정한 환경 변수
 
