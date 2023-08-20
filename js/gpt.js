@@ -2,9 +2,6 @@ const title = document.querySelector(".gpt-title");
 const input = document.querySelector(".gpt-inputs");
 const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
-const api = "OPEN_API_KEY";
-
-const url = "https://api.openai.com/v1/chat/completions";
 
 const roles = [
   ` "You are a Korean Senior Programmer. You basically answer using korean. If user asking you english, you can answer elglish.\n You could only answer about programming. if user asking you somthing doesn't related with programming, say sorry and explain your role as Programming trainer`,
@@ -19,7 +16,6 @@ async function handleQuestion() {
     // API 요청의 헤더를 설정
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${api}`,
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo", // 사용할 AI 모델
@@ -41,16 +37,15 @@ async function handleQuestion() {
     }),
   };
 
-  await fetch(url, options)
-    .then((response) => response.json())
-    .then((data) => {
-      document.querySelector(".answer").textContent =
-        data.choices[0].message.content;
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("에러 있어요  !", error);
-    });
+  try {
+    const response = await fetch("/api/question", options); // 경로 수정
+    const data = await response.json();
+    document.querySelector(".answer").textContent =
+      data.choices[0].message.content;
+    console.log(data);
+  } catch (error) {
+    console.error("에러 있어요!", error);
+  }
 }
 
 function handleEnter(e) {
