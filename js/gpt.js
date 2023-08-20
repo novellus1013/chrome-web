@@ -42,8 +42,12 @@ async function handleQuestion() {
   await fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      document.querySelector(".answer").textContent =
-        data.choices[0].message.content;
+      if (data && data.choices && data.choices.length > 0) {
+        document.querySelector(".answer").textContent =
+          data.choices[0].message.content;
+      } else {
+        console.error("응답이 유효하지 않습니다.");
+      }
       console.log(data);
     })
     .catch((error) => {

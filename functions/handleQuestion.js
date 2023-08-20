@@ -1,12 +1,17 @@
-import fetch from "node-fetch";
+const fetch = require("node-fetch");
 
-export async function handler(event) {
+exports.handler = async function (event) {
   const url = "https://api.openai.com/v1/chat/completions";
   const api = process.env.GPT_KEY; // 환경 변수에서 Secret Key 읽어오기
 
-  const options = JSON.parse(event.body);
-
-  options.headers.Authorization = `Bearer ${api}`;
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${api}`,
+    },
+    body: JSON.stringify(JSON.parse(event.body)),
+  };
 
   try {
     const response = await fetch(url, options);
@@ -25,4 +30,4 @@ export async function handler(event) {
       body: JSON.stringify({ error: error.message }),
     };
   }
-}
+};
