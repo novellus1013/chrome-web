@@ -1,10 +1,9 @@
-// server.js
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const API_KEY = process.env.API_KEY; // Vercel에서 설정한 환경 변수
+const API_KEY = process.env.API_KEYS; // Vercel에서 설정한 환경 변수
 
 app.use(express.json());
 
@@ -14,7 +13,7 @@ app.post("/api/question", async (req, res) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
+      Authorization: `Bearer ${API_KEYS}`,
     },
     body: JSON.stringify(req.body),
   };
