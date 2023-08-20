@@ -16,10 +16,8 @@ async function handleQuestion() {
 
   const options = {
     method: "POST",
-    // API 요청의 헤더를 설정
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${api}`,
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo", // 사용할 AI 모델
