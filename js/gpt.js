@@ -37,7 +37,7 @@ async function handleQuestion() {
     }),
   };
 
-  await fetch("/api/question", options)
+  await fetch("/api/question.js", options)
     .then((response) => response.json())
     .then((data) => {
       document.querySelector(".answer").textContent =
