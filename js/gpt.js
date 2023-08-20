@@ -38,7 +38,7 @@ async function handleQuestion() {
   };
 
   try {
-    const response = await fetch("/api/question.js", options);
+    const response = await fetch("/api/question", options); // 경로 수정
     const data = await response.json();
     document.querySelector(".answer").textContent =
       data.choices[0].message.content;
