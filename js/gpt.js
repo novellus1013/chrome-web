@@ -4,7 +4,7 @@ const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
 
 //url 변경
-const url = "/functions/handleQuestion";
+const url = "/.netlify/functions/handleQuestion";
 
 const roles = [
   ` "You are a Korean Senior Programmer. You basically answer using korean. If user asking you english, you can answer elglish.\n You could only answer about programming. if user asking you somthing doesn't related with programming, say sorry and explain your role as Programming trainer`,
