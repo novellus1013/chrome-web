@@ -1,6 +1,6 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-exports.handler = async function (event) {
+export async function handler(event) {
   const url = "https://api.openai.com/v1/chat/completions";
   const api = process.env.GPT_KEY; // 환경 변수에서 Secret Key 읽어오기
 
@@ -30,4 +30,4 @@ exports.handler = async function (event) {
       body: JSON.stringify({ error: error.message }),
     };
   }
-};
+}
