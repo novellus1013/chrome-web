@@ -10,3 +10,6 @@ build
 *.swp
 .DS_Store
 .vscode
+
+# Local Netlify folder
+.netlify
