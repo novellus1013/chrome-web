@@ -37,16 +37,15 @@ async function handleQuestion() {
     }),
   };
 
-  await fetch("/api/question.js", options)
-    .then((response) => response.json())
-    .then((data) => {
-      document.querySelector(".answer").textContent =
-        data.choices[0].message.content;
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("에러 있어요  !", error);
-    });
+  try {
+    const response = await fetch("/api/question.js", options);
+    const data = await response.json();
+    document.querySelector(".answer").textContent =
+      data.choices[0].message.content;
+    console.log(data);
+  } catch (error) {
+    console.error("에러 있어요!", error);
+  }
 }
 
 function handleEnter(e) {
