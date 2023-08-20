@@ -10,9 +10,9 @@
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "axios": "^1.4.0"
   }
 }
