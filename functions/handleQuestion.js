@@ -1,6 +1,8 @@
-import fetch from "node-fetch";
+let fetch;
 
 export async function handler(event) {
+  if (!fetch) fetch = await import("node-fetch").then((mod) => mod.default);
+
   const url = "https://api.openai.com/v1/chat/completions";
   const api = process.env.GPT_KEY; // 환경 변수에서 Secret Key 읽어오기
 
