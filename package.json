@@ -4,7 +4,8 @@
   "description": "gpt api를 연동한 크롬웹 서비스",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:functions": "cd functions/myFunction && npm install",
+    "build": "npm run install:functions && <기존 빌드 명령어>"
   },
   "author": "novellus1013",
   "license": "ISC",
