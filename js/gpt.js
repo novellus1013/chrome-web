@@ -2,9 +2,9 @@ const title = document.querySelector(".gpt-title");
 const input = document.querySelector(".gpt-inputs");
 const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
-const api = "OPEN_API_KEY";
 
-const url = "https://api.openai.com/v1/chat/completions";
+//url 변경
+const url = "/.netlify/functions/handleQuestion";
 
 const roles = [
   ` "You are a Korean Senior Programmer. You basically answer using korean. If user asking you english, you can answer elglish.\n You could only answer about programming. if user asking you somthing doesn't related with programming, say sorry and explain your role as Programming trainer`,
