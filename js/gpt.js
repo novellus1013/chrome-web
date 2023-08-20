@@ -3,9 +3,6 @@ const input = document.querySelector(".gpt-inputs");
 const question = document.querySelector(".gpt-inputs textarea");
 const btn = document.querySelector(".gpt-inputs button");
 
-//url 변경
-const url = "/.netlify/functions/handleQuestion";
-
 const roles = [
   ` "You are a Korean Senior Programmer. You basically answer using korean. If user asking you english, you can answer elglish.\n You could only answer about programming. if user asking you somthing doesn't related with programming, say sorry and explain your role as Programming trainer`,
   ` "You are a English Teacher. You basically answer using korean. If user asking you english, you can answer elglish.\n You could only answer about english study. if user asking you somthing doesn't related with english, say sorry and explain your role as English teacher`,
@@ -16,6 +13,7 @@ async function handleQuestion() {
 
   const options = {
     method: "POST",
+    // API 요청의 헤더를 설정
     headers: {
       "Content-Type": "application/json",
     },
@@ -39,15 +37,11 @@ async function handleQuestion() {
     }),
   };
 
-  await fetch(url, options)
+  await fetch("/api/question", options)
     .then((response) => response.json())
     .then((data) => {
-      if (data && data.choices && data.choices.length > 0) {
-        document.querySelector(".answer").textContent =
-          data.choices[0].message.content;
-      } else {
-        console.error("응답이 유효하지 않습니다.");
-      }
+      document.querySelector(".answer").textContent =
+        data.choices[0].message.content;
       console.log(data);
     })
     .catch((error) => {

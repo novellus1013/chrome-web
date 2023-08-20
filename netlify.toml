@@ -1,8 +1,0 @@
-[build]
-  functions = "functions"
-  ignore = "git diff --quiet HEAD^ HEAD ."
-  command = "npm install && npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18.0.0"

@@ -1,19 +1,17 @@
 {
   "name": "chrome-web",
   "version": "1.0.0",
-  "description": "gpt api를 연동한 크롬웹 서비스",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "install:functions": "cd functions/myFunction && npm install",
-    "build": "npm run install:functions && <기존 빌드 명령어>"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "novellus1013",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
+  "type": "commonjs",
   "dependencies": {
-    "axios": "^1.4.0"
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
   }
 }
